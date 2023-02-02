@@ -9,7 +9,5 @@ import HeadPage from '../components/HeadPage.vue';
 </template>
 
 <style>
-body{
-  background:red;
-}
+
 </style>
