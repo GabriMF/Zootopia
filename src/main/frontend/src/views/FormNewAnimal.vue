@@ -101,7 +101,7 @@ main{
       background: transparent;
       width:100%;
       color: black;
-      font-size: 1.2sdaem;
+      font-size: 1.1em;
       padding :.8em 3em;
       border:none;
       margin-right: 0;
