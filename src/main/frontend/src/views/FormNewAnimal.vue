@@ -67,7 +67,7 @@ main{
   height: 40%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color:blue;
+
   margin: 0 auto;
   .side{
   width:100%;
@@ -77,7 +77,7 @@ main{
 }
 
   .forms{
-    height:50%;
+    height:50vh;
     width: 50%;
     padding: 9em;
     display: flex;
@@ -100,7 +100,7 @@ main{
       
       background: transparent;
       width:100%;
-      color: #5757577e;
+      color: black;
       font-size: 1.2sdaem;
       padding :.8em 3em;
       border:none;
