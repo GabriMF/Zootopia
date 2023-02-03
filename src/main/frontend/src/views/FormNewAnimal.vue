@@ -4,7 +4,7 @@
     
     
     <div class="side">
-       <img src="../assets/img/PhotoForm.jpg"  class="__side-img" alt="Photo-form">
+       <img src="../assets/img/PhotoForm.jpg"  width="100%" height="100%" class="__side-img" alt="Photo-form">
       </div>
     <form class="forms">
       
@@ -62,18 +62,28 @@
 
 main{
  
-
-  @include m.flex(flex,row,auto,center,center);
-
+  // @include m.flex(flex,row,auto,center,center);
+  width: 60%;
+  height: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color:blue;
+  margin: 0 auto;
+  .side{
+  width:100%;
+  height: 100%;
+  background-color: red;
+  
+}
 
   .forms{
     height:50%;
     width: 50%;
-    max-width: 400px;
-    padding: 13em 9em;
-    text-align: right;
+    padding: 9em;
     display: flex;
     flex-direction: column;
+    background-color: pink;
+   
    
 
     &__title{
@@ -91,7 +101,7 @@ main{
       background: transparent;
       width:100%;
       color: #5757577e;
-      font-size: 1rem;
+      font-size: 1.2sdaem;
       padding :.8em 3em;
       border:none;
       margin-right: 0;
@@ -122,11 +132,10 @@ transform: left bottom;
 
 }
 } 
+
 }
     
-.side{
-  width:20%;
-}
+
  
      
      
