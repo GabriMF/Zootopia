@@ -73,41 +73,51 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
 
   .form__wrapper{
     display: flex;
-     background-color: red;
-   
-    justify-content: center;
-    align-items: flex-start;
-    border-style: solid;
-    .form__img{
-      background-color: bisque;
-
-    
-    }
-
-
-    .form__container{
-      background-color: aqua;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      width: 50vh;
-      .form__title{
-        font-size: 12px;
-        display: flex;
-        justify-content: center;
-        margin-top: 4rem;
-
-        h1{
-          color:black;
-          display: flex;
-        }
+    //  background-color: red;
+     justify-content: center;
+     align-items: flex-start;
+     border-style: solid;
+     width: auto;
+     height: 0 auto;
+     overflow: hidden;
+    //  height: auto;
+     .form__img{
+      //  background-color: bisque;
+      height: 35vh;
+       img{
+         height:auto;
+       }
+       
       }
+      .form__container{
+        // background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 50%;
+        height: 70%;
+ 
+ 
+        
+        
+        .form__title{
+          font-size: 12px;
+          display: flex;
+          justify-content: center;
+          margin-top: 4rem;
+  
+          h1{
+            color:black;
+            display: flex;
+          }
+        }
+
         .form__fields{
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background-color: yellow;
+          // background-color: yellow;
            
 
           .form__group{
@@ -141,14 +151,14 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
 
           
         }
-
-    
-  
-  
     }
   }
 }
 </style>
+
+    
+  
+  
   
   
   
