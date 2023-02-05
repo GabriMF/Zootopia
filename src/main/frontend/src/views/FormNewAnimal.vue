@@ -69,11 +69,12 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
   width: 100%;
   height: 100%;
   // grid-template-columns: 1fr 1fr;
-  background-color: blue;
+  // background-color: blue;
 
   .form__wrapper{
     display: flex;
-    background-color: red;
+     background-color: red;
+   
     justify-content: center;
     align-items: flex-start;
     border-style: solid;
@@ -89,34 +90,81 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
       display: flex;
       flex-direction: column;
       gap: 4px;
-     
-      
+      width: 50vh;
       .form__title{
         font-size: 12px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+        margin-top: 4rem;
 
+        h1{
+          color:black;
+          display: flex;
+        }
       }
+        .form__fields{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: yellow;
+           
+
+          .form__group{
+            position: relative;
+            
+          }
+
+          .form__input{
+            background: transparent;
+            font-size: 1.3em;
+            border: none;
+            margin: 0.5em 2rem;
+            outline: none;
+            padding: 0.9em 3em;
+            border-bottom: 1px solid #5757577e;
+            color: black;
+            font-family: "Courier New", Courier, monospace;
+          }
+
+        }
+
+        .form_btn{
+          display: flex;
+          justify-content: center;
+          background: rgb(238, 90, 90);
+          border: none;
+          font-weight: 300;
+          font-size: 1.4rem;
+          margin:1.3em 2em;
+          padding: 0.9em;
+
+          
+        }
+
+    
+  
+  
+    }
+  }
+}
+</style>
+  
+  
+  
+      
+       
+
       
 
-    }
-
-
-  }
-  
 
 
   
 
 
-
-
-
-}
-
+  
 
 
 
 
 
-</style>
