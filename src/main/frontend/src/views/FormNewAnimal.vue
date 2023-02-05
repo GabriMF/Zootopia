@@ -97,9 +97,7 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
         justify-content: flex-end;
 
       }
-      dasdoas
-      asdjaosfjajsf
-      asfjaosfjoas
+      
 
     }
 
