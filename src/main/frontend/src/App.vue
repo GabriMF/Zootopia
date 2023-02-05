@@ -1,21 +1,11 @@
+<script setup>
+import LandingView from './views/LandingView.vue';
+</script>
+
 <template>
-  <v-app>
-    <v-main>
-        <LandingView/>
-        <HomeView/>
-    </v-main>
-  </v-app>
+  <LandingView/>
 </template>
 
-<script>
-export default {
-    name: "App",
-    data: () => ({
-    //
-    }),
-    components: { HomeView }
-}
-import HomeView from './views/HomeView.vue';
-import HomeView from './views/HomeView.vue';
-import LandingView from './views/LandingView.vue'
-</script>
+<style>
+
+</style>

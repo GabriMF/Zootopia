@@ -3,10 +3,13 @@ import App from './App.vue'
 // import router from './router'
 import vuetify from './plugins/vuetify'
 import { loadFonts } from './plugins/webfontloader'
+import { createPinia } from 'pinia'
 
 loadFonts()
 
-createApp(App)
-  // .use(router)
+const app = createApp(App)
+  app.use(createPinia())
   .use(vuetify)
-  .mount('#app')
+  //app.use(router)
+  app.mount('#app')
+  import './sass/styles.scss'

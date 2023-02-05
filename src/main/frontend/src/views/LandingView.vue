@@ -3,26 +3,32 @@
 </script>
 
 <template>
-    <section id="landingPic">
-        
+    <section id="landingPicSection">
+        <img id="landingPic" src="../assets/images/Zootopia_pic_adapted.jpg" alt="zootopiaLandingPic">
     </section>
     <section id="logIn">
-
+        <v-form ref="form">
+            <v-text-field
+                v-model="name"
+                label="Name"
+                required
+            ></v-text-field>
+        </v-form>
     </section>
 </template>
 
 <style>
-    #landingPic{
-        background-color: aqua;
+    #landingPicSection{
         float: left;
-        width: 55vw;
+        width: 54vw;
+    }
+    #landingPic{
         height: 100vh;
+        width: 50vw;
     }
 
     #logIn{
-        background-color: red;
         float: right;
-        width: 45vw;
-        height: 100vh;
+        width: 44vw;
     }
 </style>

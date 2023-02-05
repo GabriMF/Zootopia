@@ -7,7 +7,7 @@ import Nav from '../components/Nav.vue';
 
 <template>
   <HeadPage />
-  <Nav></Nav>
+  <Nav/>
   <FootPage />
 </template>
 
