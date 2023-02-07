@@ -1,4 +1,6 @@
 <script setup>
+import DashBoardView from './DashBoardView.vue';
+
 
 </script>
 
@@ -6,7 +8,7 @@
     <section id="logIn">
         <img id="landingPic" src="../assets/images/Zootopia_pic_adapted.jpg" alt="zootopiaLandingPic">
         <div id="form">
-            <h1>Log In</h1>
+            <h1 id="logInHeader">Log In</h1>
             <FormKit
             id="userNameInput"
             type="text"
@@ -25,6 +27,7 @@
                 id="submitButton"
                 type="form"
                 label="submit"
+                @click="DashBoardView"
             />
         </div>
     </section>
@@ -45,9 +48,16 @@
         display: flex;
         flex-direction: column;
         font-size: xx-large;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         align-items: center;
         margin: auto;
+    }
+
+    #logInHeader{
+        font-size: xxx-large;
+        font-weight: bolder;
+        margin-bottom: 10vh;
+        margin-right: 23vw;
     }
 
     #userNameInput{
@@ -65,9 +75,28 @@
     }
 
     #submitButton{
-        margin-top: 2vh;
+        display: flex;
+        text-align: center;
+        justify-content: center;
         background-color: black;
+        color: white;
+        border-radius: 1vw;
+        margin-top: 2vh;
         width: 15vw;
         height: 6vh;
+    }
+
+    #userNameInput-rule_length{
+        color: red;
+        font-size: medium;
+    }
+    #userNameInput-rule_required{
+        color: red;
+        font-size: medium;
+    }
+
+    #passwordInput-rule_required{
+        color: red;
+        font-size: medium;
     }
 </style>
