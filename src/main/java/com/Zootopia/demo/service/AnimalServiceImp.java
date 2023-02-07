@@ -5,36 +5,39 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.Zootopia.demo.entity.Animal;
+import com.Zootopia.demo.repository.AnimalRepository;
+
 
 
 @Service
-public class UserServiceImpl implements UserService {
+public class AnimalServiceImp implements AnimalService {
     @Autowired
-    private UserRepository userRepository;
+    private AnimalRepository animalRepository;
     @Override
     @Transactional(readOnly = true)
-    public Iterable<User> findAll() {
-        return userRepository.findAll();
+    public Iterable<Animal> findAll() {
+        return animalRepository.findAll();
     }
     @Transactional(readOnly = true)
     @Override
-    public Page<User> findAll(Pageable pageable) {
-        return userRepository.findAll(pageable);
+    public Page<Animal> findAll(Pageable pageable) {
+        return animalRepository.findAll(pageable);
     }
     @Transactional(readOnly = true)
     @Override
-    public Optional<User> findById(Long id) {
-        return userRepository.findById(id);
+    public Optional<Animal> findById(Long id) {
+        return animalRepository.findById(id);
     }
     @Transactional
     @Override
-    public User save(User user) {
-        return userRepository.save(user);
+    public Animal save(Animal animal) {
+        return animalRepository.save(animal);
     }
     @Transactional
     @Override
     public void deleteById(Long id) {
-         userRepository.deleteById(id);
+         animalRepository.deleteById(id);
     }
 }
 

@@ -1,16 +1,45 @@
 package com.Zootopia.demo.entity;
 
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
-import com.Zootopia.demo.entity.AnimalEntity.Animal;
-
+import com.Zootopia.demo.entity.Animal;
+@Entity
+@Table (name="generos")
 public class GeneroEntity {
 
 
-    @ManyToOne
-    @JoinColumn (name ="id_genero")
-    private AnimalEntity animalEntity;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name ="id_genero")
+    Long idgenero;
+
+    @Column(name="genero")
+    String genero;
+
+    @OneToMany(mappedBy ="genero")
+    private List<Animal> animals;
+
+    public Long getIdgenero() {
+        return idgenero;
+    }
+
+    public void setIdgenero(Long idgenero) {
+        this.idgenero = idgenero;
+    }
+
+    
+   
 
     
 }
