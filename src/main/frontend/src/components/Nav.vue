@@ -52,11 +52,12 @@
 button {
     border-radius: 10px;
     margin: 20px;
+    display: flex;
     
 }
 .conteinerButton {
-margin-top: 15em;
-
+margin-top: 12em;
+margin-left: 1em;
 }
 
 .homeButtonImg {
