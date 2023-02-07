@@ -35,7 +35,7 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
         <div class="form__fields">
           <div class="form__group">
             <Field type="text" class="form__input" placeholder="Name" name="name" :rules="validateForm"/>
-            <ErrorMessage name="name" />
+            <ErrorMessage id="error" name="name" />
             <span class="form__line"></span>
           </div>
           <div class="form__group">
@@ -119,6 +119,11 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
           align-items: center;
           // background-color: yellow;
            
+
+          #error{
+            color:red;
+            font-size: 1em;
+          }
 
           .form__group{
             position: relative;
