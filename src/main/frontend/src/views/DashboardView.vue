@@ -6,9 +6,13 @@ import Nav from '../components/Nav.vue';
 </script>
 
 <template>
-  <HeadPage />
-  <Nav></Nav>
-  <FootPage />
+  <main>
+    <HeadPage></HeadPage>
+    <Nav></Nav>
+    <FootPage></FootPage>
+
+  </main>
+  <!-- <h1>Esto es el dashboard</h1> -->
 </template>
 
 <style>

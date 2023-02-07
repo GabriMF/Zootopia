@@ -1,12 +1,11 @@
 <script setup>
-import DashBoardView from './views/DashBoardView.vue';
-
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-<DashBoardView />
+    
+   
+
+    <RouterView />
 </template>
 
-<style scoped>
-
-</style>
