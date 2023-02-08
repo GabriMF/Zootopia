@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section>
+    <section id="sectionCard">
         <div id="row">
             <div>
                 <div id="cardImage">
@@ -75,6 +75,11 @@
 </template>
 
 <style>
+#sectionCard{
+    display: flex;
+    height: 50vh;
+}
+
 /* #animalCardSection{ */
     /* display: grid;
     grid-template-columns: 1fr 1fr 1fr;

@@ -33,7 +33,7 @@
 
 #nav {
     float: left;
-    height: 90vh;
+    height: 100vh;
     width: 15%;
     background-color: #FDBBAC;
 }

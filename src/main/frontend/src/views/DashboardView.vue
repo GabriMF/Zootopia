@@ -19,15 +19,16 @@ import AnimalCard from '../components/AnimalCard.vue';
     <AnimalCard/>
     <AnimalCard/>
     <AnimalCard/>
-    <AnimalCard/>
   </div>
   <FootPage />
 </template>
 
 <style>
   #animalCardSection{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* justify-content: space-between; */
     max-width: 80vw;
+    height: 100vh;
   }
 </style>
