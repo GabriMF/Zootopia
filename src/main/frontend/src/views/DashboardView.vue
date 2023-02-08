@@ -29,6 +29,6 @@ import AnimalCard from '../components/AnimalCard.vue';
     grid-template-columns: 1fr 1fr 1fr;
     /* justify-content: space-between; */
     max-width: 80vw;
-    height: 100vh;
+    height: 90vh;
   }
 </style>
