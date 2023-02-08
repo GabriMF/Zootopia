@@ -2,6 +2,7 @@
 import FootPage from '../components/FootPage.vue';
 import HeadPage from '../components/HeadPage.vue';
 import Nav from '../components/Nav.vue';
+import FormNewAnimal from './FormNewAnimal.vue';
 
 </script>
 
@@ -9,6 +10,7 @@ import Nav from '../components/Nav.vue';
   <main>
     <HeadPage></HeadPage>
     <Nav></Nav>
+    <FormNewAnimal></FormNewAnimal>
     <FootPage></FootPage>
 
   </main>
