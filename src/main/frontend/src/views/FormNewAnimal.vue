@@ -1,4 +1,7 @@
 <script setup>
+import HeadPage from '../components/HeadPage.vue';
+import Nav from '../components/Nav.vue';
+import FootPage from '../components/FootPage.vue';
 import {Field , Form,ErrorMessage} from 'vee-validate';
 // export default{
 //   components:{
@@ -23,6 +26,8 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
 
 
 <template>
+  <HeadPage/>
+  <Nav/>
   <div class="main">
     <Form @submit="onSubmit" class="form__wrapper">
       <div class="form__img">
@@ -59,6 +64,7 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
       </div>
     </Form>
   </div>
+  <FootPage/>
 </template>
 
 <style lang="scss" scoped>
@@ -66,8 +72,10 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
 
 .main{
   @include m.flex(grid,auto,auto,center,center);
-  width: 100%;
-  height: 100%;
+  width: 80vw;
+  height: 90vh;
+  float: right;
+  // margin-right: 10vw;
   // grid-template-columns: 1fr 1fr;
   // background-color: blue;
 
@@ -83,7 +91,10 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
     //  height: auto;
      .form__img{
       //  background-color: bisque;
-      height: 35vh;
+      display: flex;
+      align-items: center;
+      height: 80vh;
+      margin-top: 20vh;
        img{
          height:auto;
        }
