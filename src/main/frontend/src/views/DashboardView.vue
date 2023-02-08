@@ -2,6 +2,8 @@
 import FootPage from '../components/FootPage.vue';
 import HeadPage from '../components/HeadPage.vue';
 import Nav from '../components/Nav.vue';
+import FormNewAnimal from './FormNewAnimal.vue';
+
 import AnimalCard from '../components/AnimalCard.vue';
 // public void renderCard(){
 //   i=AnimalCard;
