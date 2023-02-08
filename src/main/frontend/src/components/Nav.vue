@@ -32,7 +32,8 @@
 <style lang = "scss" scoped>
 
 #nav {
-    height: 78vh;
+    float: left;
+    height: 100vh;
     width: 15%;
     background-color: #FDBBAC;
 }
