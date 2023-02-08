@@ -21,7 +21,8 @@
     background: map-get(c.$colors, "light-pink");
     height: 5em;
     width: 100%;
-    position: absolute;
+    // position: absolute;
+    margin-top: 3vh;
     bottom:0;
     padding: 0 2em;
 
