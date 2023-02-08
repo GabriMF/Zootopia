@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section id="animalCardSection">
+    <section>
         <div id="row">
             <div>
                 <div id="cardImage">

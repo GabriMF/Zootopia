@@ -3,6 +3,10 @@ import FootPage from '../components/FootPage.vue';
 import HeadPage from '../components/HeadPage.vue';
 import Nav from '../components/Nav.vue';
 import AnimalCard from '../components/AnimalCard.vue';
+// public void renderCard(){
+//   i=AnimalCard;
+//   for(i=0, i<=9, i++);
+// }
 </script>
 
 <template>
@@ -22,8 +26,8 @@ import AnimalCard from '../components/AnimalCard.vue';
 
 <style>
   #animalCardSection{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    max-width: 80vw;
   }
 </style>
