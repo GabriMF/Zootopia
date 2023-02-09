@@ -1,7 +1,15 @@
 <script setup>
 import DashBoardView from './DashBoardView.vue';
-
-
+// function startUp(){
+//     document.getElementById("submitButton") = false;
+// }
+// const submitButton = document.getElementById('submitButton');
+// submitButton.disabled=true;
+// function checkInput(){
+//     if(document.getElementById("userNameInput") && document.getElementById("passwordInput")!= null){
+//         submitButton.disabled=false
+//     }
+// }
 </script>
 
 <template>
@@ -23,12 +31,13 @@ import DashBoardView from './DashBoardView.vue';
                 placeholder="Password"
                 validation="required"
             />
-            <FormKit
-                id="submitButton"
-                type="form"
-                label="submit"
-                @click="DashBoardView"
-            />
+            <router-link to="/home">
+                <FormKit
+                    id="submitButton"
+                    type="form"
+                    label="submit"
+                />
+            </router-link>
         </div>
     </section>
 </template>
