@@ -1,20 +1,12 @@
 <script setup>
 import DashBoardView from './DashBoardView.vue';
-// function startUp(){
-//     document.getElementById("submitButton") = false;
-// }
-// const submitButton = document.getElementById('submitButton');
-// submitButton.disabled=true;
-// function checkInput(){
-//     if(document.getElementById("userNameInput") && document.getElementById("passwordInput")!= null){
-//         submitButton.disabled=false
-//     }
-// }
+
 </script>
 
 <template>
     <section id="logIn">
-        <img id="landingPic" src="../assets/images/Zootopia_pic_adapted.jpg" alt="zootopiaLandingPic">
+        <div id="landingPic"></div>
+        <!-- <img id="landingPic" src="../assets/images/Zootopia_pic_adapted.jpg" alt="zootopiaLandingPic"> -->
         <div id="form">
             <h1 id="logInHeader">Log In</h1>
             <FormKit
@@ -42,70 +34,154 @@ import DashBoardView from './DashBoardView.vue';
     </section>
 </template>
 
-<style>
-    #landingPic{
-        float: left;
-        height: 100vh;
-        width: 50vw;
+<style lang="css">
+    @media (max-width: 767px) {
+        #logIn{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #landingPic{
+            background-image: url('../assets/images/Logo_Zootopia 2.png');
+            background-repeat: no-repeat;
+            height: 10vh;
+            width: 50vw;
+            margin: auto;
+            margin-top: 5vh;
+        }
+
+        #form{
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+            width: 100vw;
+            font-size: xx-large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            align-items: center;
+            margin: auto;
+        }
+
+        #logInHeader{
+            font-size: xxx-large;
+            font-weight: bolder;
+            margin-bottom: 10vh;
+            margin-right: 23vw;
+        }
+
+        #userNameInput{
+            height: 10vh;
+            width: 80vw;
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+        }
+
+        .validation{
+            font-size: medium;
+        }
+
+        #passwordInput{
+            height: 10vh;
+            width: 80vw;
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+        }
+
+        #submitButton{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            border-radius: 1vw;
+            margin-top: 2vh;
+            width: 80vw;
+            height: 8vh;
+        }
+
+        #userNameInput-rule_length{
+            color: red;
+            font-size: medium;
+        }
+
+        #userNameInput-rule_required{
+            color: red;
+            font-size: medium;
+        }
+
+        #passwordInput-rule_required{
+            color: red;
+            font-size: medium;
+        }
     }
 
-    #logIn{
-        display: flex;
-    }
+    @media (min-width: 768px) {
+        #landingPic{
+            background-image: url('../assets/images/Zootopia_pic.jpg');
+            background-repeat: no-repeat;
+            float: left;
+            height: 100vh;
+            width: 50vw;
+        }
 
-    #form{
-        display: flex;
-        flex-direction: column;
-        font-size: xx-large;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        align-items: center;
-        margin: auto;
-    }
+        #logIn{
+            display: flex;
+        }
 
-    #logInHeader{
-        font-size: xxx-large;
-        font-weight: bolder;
-        margin-bottom: 10vh;
-        margin-right: 23vw;
-    }
+        #form{
+            display: flex;
+            flex-direction: column;
+            font-size: xx-large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            align-items: center;
+            margin: auto;
+        }
 
-    #userNameInput{
-        margin-top: 2vh;
-        margin-bottom: 2vh;
-    }
+        #logInHeader{
+            font-size: xxx-large;
+            font-weight: bolder;
+            margin-bottom: 10vh;
+            margin-right: 23vw;
+        }
 
-    .validation{
-        font-size: medium;
-    }
+        #userNameInput{
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+        }
 
-    #passwordInput{
-        margin-top: 2vh;
-        margin-bottom: 2vh;
-    }
+        .validation{
+            font-size: medium;
+        }
 
-    #submitButton{
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        background-color: black;
-        color: white;
-        border-radius: 1vw;
-        margin-top: 2vh;
-        width: 15vw;
-        height: 6vh;
-    }
+        #passwordInput{
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+        }
 
-    #userNameInput-rule_length{
-        color: red;
-        font-size: medium;
-    }
-    #userNameInput-rule_required{
-        color: red;
-        font-size: medium;
-    }
+        #submitButton{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            border-radius: 1vw;
+            margin-top: 2vh;
+            width: 15vw;
+            height: 6vh;
+        }
 
-    #passwordInput-rule_required{
-        color: red;
-        font-size: medium;
+        #userNameInput-rule_length{
+            color: red;
+            font-size: medium;
+        }
+        #userNameInput-rule_required{
+            color: red;
+            font-size: medium;
+        }
+
+        #passwordInput-rule_required{
+            color: red;
+            font-size: medium;
+        }
     }
+    
 </style>
