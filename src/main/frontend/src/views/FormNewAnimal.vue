@@ -3,12 +3,9 @@ import HeadPage from '../components/HeadPage.vue';
 import Nav from '../components/Nav.vue';
 import FootPage from '../components/FootPage.vue';
 import {Field , Form,ErrorMessage} from 'vee-validate';
-// export default{
-//   components:{
-//     Form,
-//     Field,
-//   },
-  // methods:{
+import {ref} from 'vue';
+import axios from 'axios';
+
    function onSubmit(values){
       console.log(values,null,2);
         }
@@ -20,6 +17,65 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
     return true;
    }
 
+   // method Post
+
+   let nameM = ref("");
+   let idM = ref("");
+   let typeM = ref("");
+   let familyM = ref("");
+   let genderM = ref("");
+   let dateM = ref ("");
+   let countryM = ref("");
+
+   const postData = async () =>{
+  
+   axios({
+      method: 'POST',
+      url: "http://localhost:8080/api/animals/",
+      data: {
+        id:idM.value,
+        name: nameM.value,
+        type: typeM.value,
+        gender: genderM.value,
+        country: countryM.value,
+        family: familyM.value
+      }
+    })
+    alert('Add Animal')
+    .catch(err=>console.log(err))
+   
+  };
+     
+   
+
+
+
+
+
+  
+
+
+
+
+
+  //   const res = await axios.post("http://localhost:8080/api/animals/",
+    
+  //     {
+  //       name: nameM.value,
+  //       type: typeM.value,
+  //       family: familyM.value,
+  //       gender: genderM.value,
+  //       country: countryM.value
+
+  //     })
+
+  //     .then(res =>console.log(res));
+    
+  
+
+
+
+
 
 </script>
 
@@ -29,7 +85,7 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
   <HeadPage/>
   <Nav/>
   <div class="main">
-    <Form @submit="onSubmit" class="form__wrapper">
+    <Form @submit="postData" class="form__wrapper">
       <div class="form__img">
         <img src="../assets/img/img-form.jpg" alt="photo-form" />
       </div>
@@ -38,25 +94,34 @@ import {Field , Form,ErrorMessage} from 'vee-validate';
           <h1>NEW FORM ANIMAL</h1>
         </div>
         <div class="form__fields">
+        <div class="form__group">
+            <Field type="text" class="form__input" placeholder="id" v-model="idM" name="id"/>
+            <span class="form__line"></span>
+          </div>
           <div class="form__group">
-            <Field type="text" class="form__input" placeholder="Name" name="name" :rules="validateForm"/>
+            <Field type="text" class="form__input" placeholder="Name" name="name"  v-model="nameM" :rules="validateForm"/>
             <ErrorMessage id="error" name="name" />
             <span class="form__line"></span>
           </div>
           <div class="form__group">
-            <Field type="text" class="form__input" placeholder="Type" name="type"/>
+            <Field type="text" class="form__input" placeholder="Type" v-model="typeM" name="type"/>
             <span class="form__line"></span>
           </div>
           <div class="form__group">
-            <Field type="text" class="form__input" placeholder="Family" name="family"/>
+            <Field type="text" class="form__input" placeholder="Family" v-model="familyM" name="family"/>
             <span class="form__line"></span>
           </div>
           <div class="form__group">
-            <Field type="text" class="form__input" placeholder="Gender" name="gender"/>
+            <Field type="text" class="form__input" placeholder="Gender" v-model="genderM" name="gender"/>
             <span class="form__line"></span>
           </div>
           <div class="form__group">
-            <Field type="text" class="form__input" placeholder="Date" name="Date"/>
+            <Field type="text" class="form__input" placeholder="Date" v-model="dateM" name="Date"/>
+            <span class="form__line"></span>
+          </div>
+
+          <div class="form__group">
+            <Field type="text" class="form__input" placeholder="Country" v-model="countryM" name="country"/>
             <span class="form__line"></span>
           </div>
         </div>
