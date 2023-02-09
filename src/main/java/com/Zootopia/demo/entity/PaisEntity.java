@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 import com.Zootopia.demo.entity.Animal;
 @Entity
-@Table (name="paises")
+@Table (name="countries")
 public class PaisEntity {
 
 @Id
@@ -25,9 +25,31 @@ Long idpais;
 @Column (name="pais")
 String pais;
 
+public PaisEntity(String pais) {
+    this.pais = pais;
+}
 
-@OneToMany(mappedBy = "pais")
-private List<Animal> animals;
+public Long getIdpais() {
+    return idpais;
+}
 
-    
+public void setIdpais(Long idpais) {
+    this.idpais = idpais;
+}
+
+public String getPais() {
+    return pais;
+}
+
+public void setPais(String pais) {
+    this.pais = pais;
+}
+
+
+
+
+
+// @OneToMany(mappedBy = "pais")
+// private List<Animal> animals;
+
 }

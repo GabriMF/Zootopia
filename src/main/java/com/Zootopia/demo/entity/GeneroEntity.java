@@ -14,10 +14,8 @@ import javax.persistence.Table;
 
 import com.Zootopia.demo.entity.Animal;
 @Entity
-@Table (name="generos")
+@Table (name="genders")
 public class GeneroEntity {
-
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,8 +25,14 @@ public class GeneroEntity {
     @Column(name="genero")
     String genero;
 
-    @OneToMany(mappedBy ="genero")
-    private List<Animal> animals;
+    
+
+    // @OneToMany(mappedBy ="genero")
+    // private List<Animal> animals;
+
+    public GeneroEntity(String genero) {
+        this.genero = genero;
+    }
 
     public Long getIdgenero() {
         return idgenero;

@@ -68,9 +68,11 @@ public class AnimalController {
     // Leer todos los usuarios
     @GetMapping
     public List<Animal> readAll() {
-        List<Animal> animals =  StreamSupport
+        return animalService.findAll();
+
+        /* List<Animal> animals =  StreamSupport
                     .stream(animalService.findAll().spliterator(),false) // Nos recorre todos los usuarios secuancialemnte en vez de paralelo(por eso pusimos el false) JAVA 8 Stream
                     .collect(Collectors.toList());  // Para pasarlo a una lista
-    return animals;
+    return animals; */
     }
 }

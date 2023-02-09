@@ -28,12 +28,16 @@ Long idType;
 String type;
 
 
-@OneToMany(mappedBy ="type")
-    private List<Animal> animals;
+// @OneToMany(mappedBy ="type")
+//     private List<Animal> animals;
 
 
 public Long getIdType() {
     return idType;
+}
+
+public TipoEntity(String type) {
+    this.type = type;
 }
 
 public void setIdType(Long idType) {
