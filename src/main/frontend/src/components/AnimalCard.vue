@@ -1,5 +1,15 @@
 <script setup>
 
+const props = defineProps({
+		animal: {
+			type: Object,
+			default: null,
+		}
+	});
+
+    const losiento =()=>{
+  alert("No funciono")
+}
 </script>
 
 <template>
@@ -16,10 +26,10 @@
                     <div id="cardContent">
                         <div id="nameBox">
                             <h2 class="BoxLabel">
-                                Name
+                            Name
                             </h2>
                             <div id="animalName">
-                                vdfv
+                                {{ animal.name }}
                             </div>
                         </div>
                         <div id="typeBox">
@@ -27,7 +37,7 @@
                                 Type
                             </h2>
                             <div id="animalName">
-                                fvdvf
+                                PowerRanger
                             </div>
                         </div>
                         <div id="genderBox">
@@ -35,7 +45,7 @@
                                 Gender
                             </h2>
                             <div id="animalName">
-                                vfdfd
+                                ?
                             </div>
                         </div>
                         <div id="countryBox">
@@ -43,7 +53,7 @@
                                 Country
                             </h2>
                             <div id="animalName">
-                                fdvfvdfvf
+                                Cataluña
                             </div>
                         </div>
                         <div id="dateBox">
@@ -51,17 +61,17 @@
                                 Date
                             </h2>
                             <div id="animalName">
-                                fvdfvfdv
+                                {{ animal.date  }}
                             </div>
                         </div>
                     </div>
                     <div id="cardActions">
                         <div id="actionButtons">
-                            <div id="editButton">
-                                <a href=""><img src="../assets/images/Edit_Icon.PNG" alt="Edit"></a>
+                            <div id="editButton" @click="losiento">
+                                <i class="fa-solid fa-trash"></i>
                             </div>
                             <div id="deleteButton">
-                                <a href=""><img src="../assets/images/Delete_Icon.PNG" alt="Delete"></a>
+                                <i class="fa-solid fa-pencil"></i>
                             </div>
                         </div>
                     </div>
@@ -74,7 +84,7 @@
 <style>
 #sectionCard{
     display: flex;
-    height: 50vh;
+    height: 30vh;
 }
 
 #row{
@@ -87,6 +97,8 @@
     max-width: 25vw;
     max-height: 50vh;
     margin-top: 5vh;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 #cardTemplate{
@@ -100,7 +112,7 @@
 }
 
 #picCard{
-    border-radius: 100%;
+    border-radius: 5px;
     max-height: 15vh;
     max-width: 8vw;
     margin-top: 2vh;
@@ -145,5 +157,9 @@
 #deleteButton{
     height: 5vh;
     width: 5vh;
+}
+
+.fa-solid{
+    font-size: 1.5em;
 }
 </style>

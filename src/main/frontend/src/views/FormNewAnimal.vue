@@ -20,6 +20,7 @@ import axios from 'axios';
    // method Post
 
    let nameM = ref("");
+   let idM = ref("");
    let typeM = ref("");
    let familyM = ref("");
    let genderM = ref("");
@@ -27,10 +28,12 @@ import axios from 'axios';
    let countryM = ref("");
 
    const postData = async () =>{
-    axios({
+  
+   axios({
       method: 'POST',
       url: "http://localhost:8080/api/animals/",
       data: {
+        id:idM.value,
         name: nameM.value,
         type: typeM.value,
         gender: genderM.value,
@@ -91,6 +94,10 @@ import axios from 'axios';
           <h1>NEW FORM ANIMAL</h1>
         </div>
         <div class="form__fields">
+        <div class="form__group">
+            <Field type="text" class="form__input" placeholder="id" v-model="idM" name="id"/>
+            <span class="form__line"></span>
+          </div>
           <div class="form__group">
             <Field type="text" class="form__input" placeholder="Name" name="name"  v-model="nameM" :rules="validateForm"/>
             <ErrorMessage id="error" name="name" />
