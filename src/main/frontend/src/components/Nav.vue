@@ -1,4 +1,5 @@
-<script>
+<script >
+
 </script>
 
 <template>
@@ -23,8 +24,10 @@
             </select>
 
         <div class="conteinerButton">
-            <button><i class="fa-solid fa-house homeButtonImg"></i><router-link to="/">HOME</router-link></button>
-            <button><i class="fa-solid fa-user-plus addButtonImg"></i> <router-link to="/dashboard">ADD +</router-link></button>
+            <button><i class="fa-solid fa-house homeButtonImg"></i><router-link to="/">landing</router-link></button>
+
+            <button><i class="fa-solid fa-house homeButtonImg"></i><router-link to="/home">HOME</router-link></button>
+            <button><i class="fa-solid fa-user-plus addButtonImg"></i> <router-link to="/addanimal">ADD +</router-link></button>
         </div>
     </div>
 </template>
