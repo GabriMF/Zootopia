@@ -56,9 +56,6 @@
                         </div>
                     </div>
                     <div id="cardActions">
-                        <!-- <div id="openButton">
-                            <a href="#">Open</a>
-                        </div> -->
                         <div id="actionButtons">
                             <div id="editButton">
                                 <a href=""><img src="../assets/images/Edit_Icon.PNG" alt="Edit"></a>
@@ -80,20 +77,7 @@
     height: 50vh;
 }
 
-/* #animalCardSection{ */
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 80vw; */
-    /* flex-direction: row; */
-    /* justify-content: flex-start; */
-    /* height: 100vh; */
-    /* width: 80vw; */
-    /* margin-left: 10vw; */
-/* } */
-
 #row{
-    /* border-color: black;
-    border-width: 10vw; */
     background-color: rgb(176, 212, 200);
     display: flex;
     align-items: center;
@@ -146,16 +130,6 @@
     margin-bottom: 2vh;
 }
 
-/* #openButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: larger;
-    width: 30vw;
-    height: 6vh;
-    background-color: rgb(241, 146, 146);
-} */
-
 #actionButtons{
     display: flex;
     flex-direction: row;
@@ -173,4 +147,3 @@
     width: 5vh;
 }
 </style>
-
