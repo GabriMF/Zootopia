@@ -1,5 +1,4 @@
 <script setup>
-
 const props = defineProps({
 		animal: {
 			type: Object,
@@ -26,7 +25,7 @@ const props = defineProps({
                     <div id="cardContent">
                         <div id="nameBox">
                             <h2 class="BoxLabel">
-                            Name
+                                Name
                             </h2>
                             <div id="animalName">
                                 {{ animal.name }}

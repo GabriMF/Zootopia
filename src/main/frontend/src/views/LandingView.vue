@@ -5,8 +5,8 @@ import DashBoardView from './DashBoardView.vue';
 
 <template>
     <section id="logIn">
-        <div id="landingPic"></div>
-        <!-- <img id="landingPic" src="../assets/images/Zootopia_pic_adapted.jpg" alt="zootopiaLandingPic"> -->
+        <div id="landingPicLittle"></div>
+        <img id="landingPic" src="../assets/images/Zootopia_pic_adapted.jpg" alt="zootopiaLandingPic">
         <div id="form">
             <h1 id="logInHeader">Log In</h1>
             <FormKit
@@ -41,13 +41,18 @@ import DashBoardView from './DashBoardView.vue';
             flex-direction: column;
         }
 
-        #landingPic{
+        #landingPicLittle{
             background-image: url('../assets/images/Logo_Zootopia 2.png');
             background-repeat: no-repeat;
             height: 10vh;
             width: 50vw;
             margin: auto;
             margin-top: 5vh;
+        }
+
+        #landingPic{
+            height: 0vh;
+            width: 0vw;
         }
 
         #form{
@@ -116,8 +121,6 @@ import DashBoardView from './DashBoardView.vue';
 
     @media (min-width: 768px) {
         #landingPic{
-            background-image: url('../assets/images/Zootopia_pic.jpg');
-            background-repeat: no-repeat;
             float: left;
             height: 100vh;
             width: 50vw;

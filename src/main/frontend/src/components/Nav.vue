@@ -22,49 +22,58 @@
             <option value="ghana">Ghana</option>
         </select>
 
-        <div class="conteinerButton">
-            <button><i class="fa-solid fa-house homeButtonImg"></i><router-link to="/home">HOME</router-link></button>
-            <button><i class="fa-solid fa-user-plus addButtonImg"></i> <router-link to="/addanimal">ADD +</router-link></button>
-        </div>
+        <!-- <div class="conteinerButton"> -->
+            <button id="homeButton"><i class="fa-solid fa-house homeButtonImg"></i><router-link to="/home">HOME</router-link></button>
+            <button id="addButton"><i class="fa-solid fa-user-plus addButtonImg"></i> <router-link to="/addanimal">ADD +</router-link></button>
+        <!-- </div> -->
     </div>
 </template>
  
 <style lang = "scss" scoped>
 @media(max-width: 767px){
     #nav {
-        float: left;
-        height: 100vh;
-        width: 15%;
+        display: grid;
+        // flex-direction: row;
+        grid-template-columns: 1fr 1fr;
+        height: 30vh;
+        width: 100vw;
         background-color: #FDBBAC;
     }
 
     .filterFamily {
-        padding: 15px;
+        height: 10vh;
+        width: 50vw;
         border-bottom: 1px solid black;
+        margin-left: 2vw;
     }
 
     .filterCountry {
-        padding: 15px;
+        height: 10vh;
+        width: 50vw;
         border-bottom: 1px solid black;
     }
 
     button {
-        border-radius: 10px;
-        margin: 20px;
-        display: flex;   
+        display: flex; 
+        justify-content: space-between; 
+        margin-right: 20vw; 
     }
     .conteinerButton {
-    margin-top: 12em;
-    margin-left: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100vw;
+        margin-top: 3vh;
+        margin-left: 1em;
     }
 
-    .homeButtonImg {
-        margin-right: 1em;
-    }
+    // .homeButtonImg {
+    //     margin-right: 1em;
+    // }
 
-    .addButtonImg {
-        margin-right: 1em; 
-    }
+    // .addButtonImg {
+    //     margin-right: 1em; 
+    // }
 }
 
 @media(min-width: 768px){
