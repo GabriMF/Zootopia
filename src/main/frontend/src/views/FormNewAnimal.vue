@@ -4,6 +4,7 @@ import Nav from '../components/Nav.vue';
 import FootPage from '../components/FootPage.vue';
 import {Field , Form,ErrorMessage} from 'vee-validate';
 import {ref} from 'vue'
+import axios from "axios";
 
    function onSubmit(values){
       console.log(values,null,2);
@@ -19,6 +20,7 @@ import {ref} from 'vue'
    // method Post
 
    let nameM = ref("");
+   let idM = ref("");
    let typeM = ref("");
    let familyM = ref("");
    let genderM = ref("");
@@ -26,20 +28,22 @@ import {ref} from 'vue'
    let countryM = ref("");
 
    const postData = async () =>{
-    const res = await axios.post("http://localhost:8080/api/animals/",
-    
-      {
+   axios({
+      method: 'POST',
+      url: "http://localhost:8080/api/animals/",
+      data: {
+        id:idM.value,
         name: nameM.value,
         type: typeM.value,
         family: familyM.value,
         gender: genderM.value,
         country: countryM.value
-
-      })
-
-      .then(res =>console.log(res));
+    }
+      // .then(res=> console.log(res))
+    })
     
-   };
+    .catch(err=>console.log(err))
+   }
 
 
 </script>
@@ -50,7 +54,7 @@ import {ref} from 'vue'
   <HeadPage/>
   <Nav/>
   <div class="main">
-    <Form @submit="onSubmit" class="form__wrapper">
+    <Form @submit="postData" class="form__wrapper">
       <div class="form__img">
         <img src="../assets/img/img-form.jpg" alt="photo-form" />
       </div>
@@ -59,6 +63,10 @@ import {ref} from 'vue'
           <h1>NEW FORM ANIMAL</h1>
         </div>
         <div class="form__fields">
+        <div class="form__group">
+            <Field type="text" class="form__input" placeholder="id" v-model="idM" name="id"/>
+            <span class="form__line"></span>
+          </div>
           <div class="form__group">
             <Field type="text" class="form__input" placeholder="Name" name="name"  v-model="nameM" :rules="validateForm"/>
             <ErrorMessage id="error" name="name" />
