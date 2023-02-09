@@ -3,7 +3,8 @@ import HeadPage from '../components/HeadPage.vue';
 import Nav from '../components/Nav.vue';
 import FootPage from '../components/FootPage.vue';
 import {Field , Form,ErrorMessage} from 'vee-validate';
-import {ref} from 'vue'
+import {ref} from 'vue';
+import axios from 'axios';
 
    function onSubmit(values){
       console.log(values,null,2);
@@ -26,20 +27,51 @@ import {ref} from 'vue'
    let countryM = ref("");
 
    const postData = async () =>{
-    const res = await axios.post("http://localhost:8080/api/animals/",
-    
-      {
+    axios({
+      method: 'POST',
+      url: "http://localhost:8080/api/animals/",
+      data: {
         name: nameM.value,
         type: typeM.value,
-        family: familyM.value,
         gender: genderM.value,
-        country: countryM.value
+        country: countryM.value,
+        family: familyM.value
+      }
+    })
+    alert('Add Animal')
+    .catch(err=>console.log(err))
+   
+  };
+     
+   
 
-      })
 
-      .then(res =>console.log(res));
+
+
+
+  
+
+
+
+
+
+  //   const res = await axios.post("http://localhost:8080/api/animals/",
     
-   };
+  //     {
+  //       name: nameM.value,
+  //       type: typeM.value,
+  //       family: familyM.value,
+  //       gender: genderM.value,
+  //       country: countryM.value
+
+  //     })
+
+  //     .then(res =>console.log(res));
+    
+  
+
+
+
 
 
 </script>
@@ -50,7 +82,7 @@ import {ref} from 'vue'
   <HeadPage/>
   <Nav/>
   <div class="main">
-    <Form @submit="onSubmit" class="form__wrapper">
+    <Form @submit="postData" class="form__wrapper">
       <div class="form__img">
         <img src="../assets/img/img-form.jpg" alt="photo-form" />
       </div>
